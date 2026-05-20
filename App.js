@@ -1,12 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Home from './screens/Home.js';
+import Celsius from './screens/Celsius.js';
+import Fahrenheit from './screens/Fahrenheit.js'
 
 export default function App() {
+  const Stack = createNativeStackNavigator();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer style={styles.container}>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Celsius" component={Celsius} />
+          <Stack.Screen name="Fahrenheit" component={Fahrenheit} />
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 
