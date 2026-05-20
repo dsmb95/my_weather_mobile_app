@@ -5,7 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Home from './screens/Home.js';
 import Celsius from './screens/Celsius.js';
-import Fahrenheit from './screens/Fahrenheit.js'
+import Fahrenheit from './screens/Fahrenheit.js';
+import Notes from './screens/Notes.js';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -15,6 +16,7 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Celsius" component={Celsius} />
           <Stack.Screen name="Fahrenheit" component={Fahrenheit} />
+          <Stack.Screen name="Notes" component={Notes} />
         </Stack.Navigator>
       </NavigationContainer>
   );
