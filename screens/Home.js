@@ -16,6 +16,12 @@ export default function Home({navigation}) {
                     <Text style={styles.optionsText}>Fahrenheit</Text>
                 </TouchableOpacity>
             </View>
+            <Text>Click here to log notes for today's weather.</Text>
+            <View style={styles.optionsContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate('Notes')} style={[styles.options, {width: 90}]}>
+                    <Text style={styles.optionsText}>Notes</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
