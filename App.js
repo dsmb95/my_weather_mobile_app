@@ -7,6 +7,7 @@ import Home from './screens/Home.js';
 import Celsius from './screens/Celsius.js';
 import Fahrenheit from './screens/Fahrenheit.js';
 import Notes from './screens/Notes.js';
+import MyLocation from './screens/MyLocation.js'
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -17,6 +18,7 @@ export default function App() {
           <Stack.Screen name="Celsius" component={Celsius} />
           <Stack.Screen name="Fahrenheit" component={Fahrenheit} />
           <Stack.Screen name="Notes" component={Notes} />
+          <Stack.Screen name="MyLocation" component={MyLocation} />
         </Stack.Navigator>
       </NavigationContainer>
   );
