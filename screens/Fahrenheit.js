@@ -89,6 +89,10 @@ export default function Fahrenheit({navigation}) {
                     <TouchableOpacity onPress={handleSubmit} style={styles.submit}>
                         <Text style={styles.submitText}>Search</Text>
                     </TouchableOpacity>
+                    <Text>OR</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('MyLocation', {unit: 'imperial'})} style={styles.submit}>
+                        <Text style={styles.submitText}>Use My Current Location</Text>
+                    </TouchableOpacity>
                 </View>
             )}
             
@@ -151,7 +155,7 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 50,
-        borderColor: '#3498db',
+        borderColor: 'black',
         borderWidth: 2,
         borderRadius: 8,
         paddingHorizontal: 15,
